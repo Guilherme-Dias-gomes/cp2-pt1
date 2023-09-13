@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom'
 import Home from './routes/Home/Index.jsx'
 import EditarProdutos from './routes/EditarProdutos/Index.jsx'
 import Error from './routes/Error/Index.jsx'
@@ -23,6 +23,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/Editar/Produtos/:id', element: <EditarProdutos/>
+      },
+      {
+        path: '/antiga', element: <Navigate to='/'/>
       }
     ]
   }
