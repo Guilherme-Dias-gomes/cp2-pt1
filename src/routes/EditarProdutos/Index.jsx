@@ -25,26 +25,26 @@ export default function EditarProdutos() {
     preco: produtoFiltrado.preco,
   });
 
-  const handleChange = (event)=>{
-      const {name,value} = event.target;
-      setProduto({...produto, [name]:value});
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setProduto({ ...produto, [name]: value });
   }
 
-  const handleSubmit = (event)=>{
+  const handleSubmit = (event) => {
     event.preventDefault();
 
 
-        let indice;
+    let indice;
 
-        listaProdutos.forEach((item,index)=>{
-          if(item.id == produto.id){
-            indice = index;
-          }
-        });
-      listaProdutos.splice(indice,1,produto);
+    listaProdutos.forEach((item, index) => {
+      if (item.id == produto.id) {
+        indice = index;
+      }
+    });
+    listaProdutos.splice(indice, 1, produto);
 
-      //Redirecionando após realizar a edição do produto filtrado.
-      navigate("/produtos");
+    //Redirecionando após realizar a edição do produto filtrado.
+    navigate("/produtos");
   }
 
 
@@ -69,8 +69,8 @@ export default function EditarProdutos() {
               <input
                 type="text"
                 name="preco"
-                id="idPreco" 
-                onChange={handleChange} 
+                id="idPreco"
+                onChange={handleChange}
                 value={produto.preco}
               />
             </div>
@@ -80,7 +80,7 @@ export default function EditarProdutos() {
           </fieldset>
         </form>
       </div>
- 
+
     </>
   );
 }

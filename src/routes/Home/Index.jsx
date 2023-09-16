@@ -43,7 +43,7 @@ export default function Home() {
                         </tr>
                     ))}
                 </tbody>
-
+                
                 <tfoot>
                     <tr>
                         <td colSpan={6}>Produtos em Promoção</td>
@@ -51,6 +51,7 @@ export default function Home() {
                 </tfoot>
 
             </table>
+            <Link to={"/Adicionar/produtos"}>Adicionar novo produto</Link>    
         </main>
     )
 
